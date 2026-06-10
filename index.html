@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Lexis — Word Puzzle Game</title>
+<meta name="description" content="Lexis — train your brain, one word at a time. Free on iOS & Android.">
+<!-- Social link preview -->
+<meta property="og:title" content="Lexis — Word Puzzle Game">
+<meta property="og:description" content="Train your brain, one word at a time. Free on iOS & Android.">
+<meta property="og:image" content="lexis_social_1080.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  html,body{margin:0;height:100%;background:#0D0B2E;color:#fff;
+    font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+  .wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;
+    height:100%;text-align:center;padding:24px}
+  h1{font-size:34px;margin:18px 0 6px}
+  p{color:#C4B5FD;margin:0 0 28px}
+  a.btn{display:block;width:260px;margin:10px auto;padding:16px;border-radius:16px;
+    background:#8B5CF6;color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+  a.btn.alt{background:#1c1040;border:1px solid #5a4696}
+  .mark{width:96px;height:96px;border-radius:22px;background:#8B5CF6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark"></div>
+  <h1>LEXIS</h1>
+  <p>Train your brain, one word at a time.</p>
+  <a class="btn" id="ios"  href="https://apps.apple.com/us/app/lexis-word-puzzle-game/id6762004245">Download on the App Store</a>
+  <a class="btn alt" id="android" href="https://play.google.com/store/apps/details?id=com.stefanosirodotou.lexis">Get it on Google Play</a>
+</div>
+<script>
+  // Auto-route to the right store; if neither, the buttons above are the fallback.
+  var ua = navigator.userAgent || "";
+  var ios = /iPhone|iPad|iPod/i.test(ua);
+  var android = /Android/i.test(ua);
+  if (ios)     location.replace(document.getElementById('ios').href);
+  else if (android) location.replace(document.getElementById('android').href);
+</script>
+</body>
+</html>
